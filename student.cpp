@@ -1,72 +1,64 @@
 #include "student.h"
 
-std::string Student::getStudentId() {
-	return studentId;
+std::string Student::getStudentID() {
+	return this->studentID;
 }
 
-void Student::setStudentId(std::string idNumber) {
-	studentId = idNumber;
+void Student::setStudentID(std::string idNumber) {
+	this->studentID = idNumber;
 }
 
 std::string Student::getFirstName() {
-	return firstName;
+	return this->firstName;
 }
 
 void Student::setFirstName(std::string fName) {
-	firstName = fName;
+	this->firstName = fName;
 }
 
 std::string Student::getLastName() {
-	return lastName;
+	return this->lastName;
 }
 
 void Student::setLastName(std::string lName) {
-	lastName = lName;
+	this->lastName = lName;
 }
 
 std::string Student::getEmailAddress() {
-	return emailAddress;
+	return this->emailAddress;
 }
 
 void Student::setEmailAddress(std::string eAddress) {
-	emailAddress = eAddress;
+	this->emailAddress = eAddress;
 }
 
 int Student::getAge() {
-	return age;
+	return this->age;
 }
 
 void Student::setAge(int ageValue) {
-	age = ageValue;
+	this->age = ageValue;
 }
 
 int* Student::getDaysToCompleteCourse() {
-	return daysToCompleteCourse;
+	return this->daysToCompleteCourse;
 }
 
 void Student::setDaysToCompleteCourse(int* days) {
 	for (int i = 0; i < 3; i++)
-		daysToCompleteCourse[i] = days[i];
+		this->daysToCompleteCourse[i] = days[i];
 }
 
-Student::Student(int idNumber, std::string fName, std::string lName, std::string eAddress, int ageValue, int* days, Degree type) {
-	studentId = idNumber;
-	firstName = fName;
-	lastName = lName;
-	emailAddress = eAddress;
-	age = ageValue;
-	daysToCompleteCourse = days;
+Student::Student(std::string idNumber, std::string fName, std::string lName, std::string eAddress, int ageValue, int* days) {
+	this->studentID = idNumber;
+	this->firstName = fName;
+	this->lastName = lName;
+	this->emailAddress = eAddress;
+	this->age = ageValue;
+	this->daysToCompleteCourse = days;
 }
 
 Student::~Student() {
-	delete &studentId;
-	delete &firstName;
-	delete &lastName;
-	delete &emailAddress;
-	delete &age;
-	delete &daysToCompleteCourse;
-}
-
-void Student::print() {
-	std::cout << "";
+	// Delete the array created for days to complete course.
+	delete this->daysToCompleteCourse;
 }

@@ -3,13 +3,16 @@
 
 #include "student.h"
 
-class NetworkStudent : Student {
+class NetworkStudent : public Student {
 public:
 	Degree getDegreeProgram();
-	void setDegreeProgram(Degree degreeProgram);
+	void print();
+	
+	NetworkStudent(std::string idNumber, std::string fName, std::string lName, std::string eAddress, int ageValue, int* days, Degree degreeProgram);
+	~NetworkStudent();
 
 private:
-	Degree degreeType;
+	Degree degreeProgram;
 };
 
 #endif

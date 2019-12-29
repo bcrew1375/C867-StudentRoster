@@ -3,10 +3,16 @@
 
 #include "student.h"
 
-class SecurityStudent : Student {
-/*	Degree getDegreeProgram() {
-		return degreeType;
-	}*/
+class SecurityStudent : public Student {
+public:
+	Degree getDegreeProgram();
+	void print();
+
+	SecurityStudent(std::string idNumber, std::string fName, std::string lName, std::string eAddress, int ageValue, int* days, Degree degreeProgram);
+	~SecurityStudent();
+
+private:
+	Degree degreeProgram;
 };
 
 #endif
