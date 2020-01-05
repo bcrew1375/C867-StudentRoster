@@ -43,7 +43,7 @@ public:
 	// Destructor
 	~Student();
 
-protected:
+private:
 	// Variables internal to Student class. To be externally accessed through getters and setters.
 	std::string studentID;
 	std::string firstName;

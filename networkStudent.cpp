@@ -5,11 +5,15 @@ Degree NetworkStudent::getDegreeProgram() {
 }
 
 void NetworkStudent::print() {
-	std::cout << this->studentID << "\t";
-	std::cout << "First Name: " << this->firstName << "\t";
-	std::cout << "Last Name: " << this->lastName << " \t";
-	std::cout << "Age: " << this->age << " \t";
-	std::cout << "Days in course: {" << this->daysToCompleteCourse[0] << ", " << this->daysToCompleteCourse[1] << ", " << this->daysToCompleteCourse[2] << "} \t";
+	int* days;
+
+	days = this->getDaysToCompleteCourse();
+
+	std::cout << this->getStudentID() << "\t";
+	std::cout << "First Name: " << this->getFirstName() << "\t";
+	std::cout << "Last Name: " << this->getLastName() << " \t";
+	std::cout << "Age: " << this->getAge() << " \t";
+	std::cout << "Days in course: {" << days[0] << ", " << days[1] << ", " << days[2] << "} \t";
 	std::cout << "Degree Program: Network";
 	std::cout << std::endl;
 }

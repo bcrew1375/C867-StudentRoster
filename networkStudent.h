@@ -8,7 +8,8 @@ public:
 	Degree getDegreeProgram();
 	void print();
 	
-	NetworkStudent(std::string idNumber, std::string fName, std::string lName, std::string eAddress, int ageValue, int* days, Degree degreeProgram);
+	NetworkStudent(std::string idNumber, std::string fName, std::string lName, std::string eAddress, int ageValue, int* days,
+		Degree degreeProgram);
 	~NetworkStudent();
 
 private:

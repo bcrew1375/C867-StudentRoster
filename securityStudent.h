@@ -8,7 +8,8 @@ public:
 	Degree getDegreeProgram();
 	void print();
 
-	SecurityStudent(std::string idNumber, std::string fName, std::string lName, std::string eAddress, int ageValue, int* days, Degree degreeProgram);
+	SecurityStudent(std::string idNumber, std::string fName, std::string lName, std::string eAddress, int ageValue, int* days,
+		Degree degreeProgram);
 	~SecurityStudent();
 
 private:
